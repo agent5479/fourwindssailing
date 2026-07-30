@@ -37,7 +37,7 @@ jobs:
         run: npm run build:static
         env:
           # Custom domain serves from site root (not /fourwindssailing/)
-          VITE_BASE: /
+          VITE_BASE: "/"
           VITE_SITE_URL: https://fourwindssailing.nz
           SITE_URL: https://fourwindssailing.nz
           VITE_GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
