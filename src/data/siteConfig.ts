@@ -2,7 +2,7 @@ export const SITE_NAME = 'Four Winds Sailing';
 export const SITE_LEGAL_NAME = 'Four Winds Sailing';
 export const SITE_TAGLINE = 'Local waters. Trusted hands. Your boat — or mine.';
 export const SITE_LOCATION = 'Golden Bay, New Zealand';
-export const SITE_EMAIL = 'hello@fourwindssailing.nz';
+export const SITE_EMAIL = 'thomas.billingham@gmail.com';
 export const SITE_OWNER = 'Tom Billingham';
 export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61590890969011';
 

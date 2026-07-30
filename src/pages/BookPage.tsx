@@ -15,8 +15,8 @@ export default function BookPage() {
             <p className="eyebrow">Charters</p>
             <h1>Book a sail</h1>
             <p>
-              Choose a package, pick a date, and send a request. Tom will confirm weather and
-              arrange payment directly.
+              Choose a package, pick a date, and send a request. Prices shown are estimates —
+              Tom will confirm final rates, weather, and arrange payment directly.
             </p>
             <Link to="/contact" className="text-link">
               Prefer to enquire first? Contact Tom →

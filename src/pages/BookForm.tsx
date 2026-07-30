@@ -16,6 +16,7 @@ import {
   type BookingSlot,
 } from '../data/bookingConfig';
 import { FORM_ENDPOINT, HAS_LIVE_BOOKING } from '../data/formConfig';
+import { submitEnquiry } from '../data/enquirySubmit';
 import { BOOKING_SERVICE_TYPES } from '@shared/bookingServiceTypes';
 
 type WizardStep = 1 | 2 | 3 | 4;
@@ -143,6 +144,10 @@ export default function BookForm() {
       setSubmitError('Please provide your name.');
       return;
     }
+    if (!email.trim()) {
+      setSubmitError('Email is required so Tom can confirm your request.');
+      return;
+    }
     if (!weatherAck) {
       setSubmitError('Please acknowledge weather-dependent sailing.');
       return;
@@ -150,6 +155,14 @@ export default function BookForm() {
 
     setSubmitting(true);
     setSubmitError('');
+
+    const notes = [
+      `Guests: ${guestCount}`,
+      picnicAck ? 'BYO picnic noted' : '',
+      message.trim(),
+    ]
+      .filter(Boolean)
+      .join('\n');
 
     const payload = {
       action: 'book',
@@ -161,13 +174,7 @@ export default function BookForm() {
       phone: phone.trim(),
       email: email.trim(),
       organisation: '',
-      message: [
-        `Guests: ${guestCount}`,
-        picnicAck ? 'BYO picnic noted' : '',
-        message.trim(),
-      ]
-        .filter(Boolean)
-        .join('\n'),
+      message: notes,
       website: '',
     };
 
@@ -183,8 +190,28 @@ export default function BookForm() {
           setSubmitError(data.message || 'Booking failed. Please try again.');
           return;
         }
+      } else {
+        const enquiryMessage = [
+          `Package: ${pkg.label} — ${pkg.priceLabel}`,
+          `Preferred slot: ${selectedSlot.label}`,
+          notes,
+          '',
+          'Note: availability shown on the site is illustrative. Prices are estimates — TBA / confirmed upon enquiry.',
+        ].join('\n');
+
+        const result = await submitEnquiry({
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim(),
+          topic: 'charter booking request',
+          subject: `Four Winds booking request — ${pkg.label}`,
+          message: enquiryMessage,
+        });
+        if (!result.ok) {
+          setSubmitError(result.error);
+          return;
+        }
       }
-      // Mock mode: accept locally
       setSubmitted(true);
     } catch {
       setSubmitError('Booking failed. Please check your connection and try again.');
@@ -217,8 +244,9 @@ export default function BookForm() {
       <p className="book-form__prep">{BOOKING_PREP}</p>
       {!HAS_LIVE_BOOKING && (
         <p className="book-form__demo">
-          Demo mode: availability is mocked locally. Connect <code>VITE_FORM_ENDPOINT</code> for live
-          bookings.
+          Interactive preview: times are illustrative and prices are estimates (TBA / upon
+          enquiry). Submitting sends Tom a booking enquiry — nothing is confirmed until he
+          replies.
         </p>
       )}
 
@@ -314,13 +342,14 @@ export default function BookForm() {
             />
           </label>
           <label className="field">
-            <span>Email</span>
+            <span>Email *</span>
             <input
               type="email"
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
+              required
             />
           </label>
           <label className="field">

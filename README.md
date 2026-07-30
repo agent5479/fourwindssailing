@@ -52,6 +52,10 @@ SEO includes LocalBusiness + Person JSON-LD, Open Graph / Twitter cards, geo met
 | `/about` | Tom + yacht + credentials (SRL, RYA Yachtmaster) |
 | `/contact` | Enquiry + Facebook |
 
+Enquiry and booking requests email Tom at `thomas.billingham@gmail.com` (via FormSubmit, or your optional `VITE_FORM_ENDPOINT`). The first FormSubmit delivery asks Tom to confirm the address once.
+
+Charter prices on the site are **estimates** — final rates TBA / confirmed upon enquiry. The booking wizard is interactive with illustrative availability until a live endpoint is connected.
+
 ## Credentials shown
 
 - Skipper Restricted Limits (SRL) — Maritime New Zealand

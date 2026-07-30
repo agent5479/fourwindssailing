@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import SiteLayout from '../components/SiteLayout';
 import { FACEBOOK_URL, SITE_EMAIL, SITE_LOCATION } from '../data/siteConfig';
+import { submitEnquiry } from '../data/enquirySubmit';
 
 export default function ContactPage() {
   const [name, setName] = useState('');
@@ -9,21 +10,42 @@ export default function ContactPage() {
   const [topic, setTopic] = useState('skipper');
   const [message, setMessage] = useState('');
   const [sent, setSent] = useState(false);
+  const [usedMailto, setUsedMailto] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Four Winds enquiry — ${topic}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nTopic: ${topic}\n\n${message}`
-    );
-    window.location.href = `mailto:${SITE_EMAIL}?subject=${subject}&body=${body}`;
-    setSent(true);
+    setSubmitting(true);
+    setError('');
+    setSent(false);
+    setUsedMailto(false);
+
+    try {
+      const result = await submitEnquiry({
+        name,
+        email,
+        phone,
+        topic,
+        message,
+      });
+      if (!result.ok) {
+        setError(result.error);
+        return;
+      }
+      setUsedMailto(result.method === 'mailto');
+      setSent(true);
+    } catch {
+      setError(`Could not send. Please email ${SITE_EMAIL} directly.`);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
     <SiteLayout
       title="Contact Four Winds Sailing | Skipper Hire & Charters Golden Bay"
-      description="Contact Tom Billingham at Four Winds Sailing — skipper hire or private charter enquiries in Golden Bay, Tasman, New Zealand. Email hello@fourwindssailing.nz."
+      description={`Contact Tom Billingham at Four Winds Sailing — skipper hire or private charter enquiries in Golden Bay, Tasman, New Zealand. Email ${SITE_EMAIL}.`}
       path="/contact"
       bodyClass="page-contact"
       hero={
@@ -64,10 +86,12 @@ export default function ContactPage() {
             <h2>Send an enquiry</h2>
             {sent && (
               <p className="status">
-                Your email client should open with the message ready — if not, email {SITE_EMAIL}{' '}
-                directly.
+                {usedMailto
+                  ? `Your email client should open with the message ready — if not, email ${SITE_EMAIL} directly.`
+                  : 'Thanks — your enquiry has been sent to Tom. He’ll get back to you soon.'}
               </p>
             )}
+            {error && <p className="error">{error}</p>}
             <label className="field">
               <span>Name *</span>
               <input
@@ -75,6 +99,7 @@ export default function ContactPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 autoComplete="name"
+                disabled={submitting}
               />
             </label>
             <label className="field">
@@ -85,6 +110,7 @@ export default function ContactPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="email"
+                disabled={submitting}
               />
             </label>
             <label className="field">
@@ -94,11 +120,16 @@ export default function ContactPage() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 autoComplete="tel"
+                disabled={submitting}
               />
             </label>
             <label className="field">
               <span>Topic</span>
-              <select value={topic} onChange={(e) => setTopic(e.target.value)}>
+              <select
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                disabled={submitting}
+              >
                 <option value="skipper">Skipper for hire</option>
                 <option value="charter">Private charter</option>
                 <option value="intro">Intro to sailing</option>
@@ -112,10 +143,11 @@ export default function ContactPage() {
                 rows={5}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                disabled={submitting}
               />
             </label>
-            <button type="submit" className="btn btn--gold">
-              Open email to Tom
+            <button type="submit" className="btn btn--gold" disabled={submitting}>
+              {submitting ? 'Sending…' : 'Send enquiry'}
             </button>
           </form>
         </div>

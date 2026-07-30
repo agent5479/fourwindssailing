@@ -33,7 +33,7 @@ export const BOOKING_SERVICE_TYPES: Record<BookingServiceType, BookingServiceTyp
     durationPackage: 'short',
     sessionMinutes: 150,
     calendarBlockMinutes: 150,
-    priceLabel: 'From $420 (mock)',
+    priceLabel: 'From $420 (estimate)',
   },
   half_day: {
     id: 'half_day',
@@ -45,7 +45,7 @@ export const BOOKING_SERVICE_TYPES: Record<BookingServiceType, BookingServiceTyp
     durationPackage: 'half_day',
     sessionMinutes: 240,
     calendarBlockMinutes: 240,
-    priceLabel: 'From $650 (mock)',
+    priceLabel: 'From $650 (estimate)',
   },
   full_day: {
     id: 'full_day',
@@ -57,7 +57,7 @@ export const BOOKING_SERVICE_TYPES: Record<BookingServiceType, BookingServiceTyp
     durationPackage: 'full_day',
     sessionMinutes: 480,
     calendarBlockMinutes: 480,
-    priceLabel: 'From $980 (mock)',
+    priceLabel: 'From $980 (estimate)',
   },
   intro_sailing: {
     id: 'intro_sailing',
@@ -69,7 +69,7 @@ export const BOOKING_SERVICE_TYPES: Record<BookingServiceType, BookingServiceTyp
     durationPackage: 'intro',
     sessionMinutes: 150,
     calendarBlockMinutes: 150,
-    priceLabel: 'From $480 (mock)',
+    priceLabel: 'From $480 (estimate)',
   },
   custom_charter: {
     id: 'custom_charter',
@@ -81,7 +81,7 @@ export const BOOKING_SERVICE_TYPES: Record<BookingServiceType, BookingServiceTyp
     durationPackage: 'custom',
     sessionMinutes: 480,
     calendarBlockMinutes: 480,
-    priceLabel: 'Enquire',
+    priceLabel: 'Price upon enquiry',
   },
 };
 

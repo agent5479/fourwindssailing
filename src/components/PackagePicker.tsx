@@ -23,7 +23,8 @@ export default function PackagePicker({ packages, selectedId, onSelect }: Packag
         </button>
       ))}
       <p className="package-picker__note">
-        Prefer skipper hire on your own boat? <Link to="/contact">Send an enquiry</Link> instead.
+        Prices are estimates — TBA or confirmed upon enquiry. Prefer skipper hire on your own
+        boat? <Link to="/contact">Send an enquiry</Link> instead.
       </p>
     </div>
   );

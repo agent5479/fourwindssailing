@@ -59,8 +59,8 @@ export default function ChartersPage() {
             ))}
           </div>
           <p className="fine-print center">
-            Prices marked “(mock)” are placeholders until Tom confirms rates. Payment arranged
-            directly — no online checkout in v1.
+            Listed prices are estimates only — final rates are TBA or confirmed upon enquiry.
+            Payment arranged directly — no online checkout yet.
           </p>
           <div className="cta-row center">
             <Link to="/book" className="btn btn--gold">

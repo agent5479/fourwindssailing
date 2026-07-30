@@ -14,7 +14,7 @@ export const BOOKING_PACKAGES: CharterPackageOption[] = [
     description: '~2.5 hours exploring Golden Bay under sail.',
     bookingType: 'short_sail',
     sessionMinutes: 150,
-    priceLabel: 'From $420 (mock)',
+    priceLabel: 'From $420 (estimate)',
   },
   {
     id: 'half-day',
@@ -22,7 +22,7 @@ export const BOOKING_PACKAGES: CharterPackageOption[] = [
     description: '4 hours — morning or afternoon on the bay.',
     bookingType: 'half_day',
     sessionMinutes: 240,
-    priceLabel: 'From $650 (mock)',
+    priceLabel: 'From $650 (estimate)',
   },
   {
     id: 'full-day',
@@ -30,7 +30,7 @@ export const BOOKING_PACKAGES: CharterPackageOption[] = [
     description: '8 hours of coast exploration and island time.',
     bookingType: 'full_day',
     sessionMinutes: 480,
-    priceLabel: 'From $980 (mock)',
+    priceLabel: 'From $980 (estimate)',
   },
   {
     id: 'intro-sailing',
@@ -38,7 +38,7 @@ export const BOOKING_PACKAGES: CharterPackageOption[] = [
     description: '~2.5 hours learning the basics on Tom’s yacht.',
     bookingType: 'intro_sailing',
     sessionMinutes: 150,
-    priceLabel: 'From $480 (mock)',
+    priceLabel: 'From $480 (estimate)',
   },
   {
     id: 'custom-charter',
@@ -46,7 +46,7 @@ export const BOOKING_PACKAGES: CharterPackageOption[] = [
     description: 'Bespoke route or overnight — Tom will confirm details.',
     bookingType: 'custom_charter',
     sessionMinutes: 480,
-    priceLabel: 'Enquire',
+    priceLabel: 'Price upon enquiry',
   },
 ];
 

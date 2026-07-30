@@ -1,6 +1,6 @@
 import type { DurationPackage } from '@shared/bookingServiceTypes';
 
-export const NOTIFY_EMAIL = 'hello@fourwindssailing.nz';
+export const NOTIFY_EMAIL = 'thomas.billingham@gmail.com';
 
 export const DURATION_LABELS: Record<DurationPackage, string> = {
   short: 'Short sail (~2.5 hours)',
@@ -11,7 +11,7 @@ export const DURATION_LABELS: Record<DurationPackage, string> = {
 };
 
 export const BOOKING_POLICY =
-  'Charter bookings are requests until Tom confirms. Payment is arranged directly — online payment is not processed through this form. Sailings are weather-dependent and may be rescheduled for safety.';
+  'Charter bookings are requests until Tom confirms. Listed prices are estimates only — final rates are TBA or confirmed upon enquiry. Payment is arranged directly — online payment is not processed through this form. Sailings are weather-dependent and may be rescheduled for safety.';
 
 export const BOOKING_PREP =
   'Bring layered clothing, sun protection, and soft-soled shoes. BYO picnic and drinks welcome. Max guests are listed per package — please note numbers in your booking.';
@@ -88,7 +88,7 @@ export function mockAvailability(
     return {
       success: true,
       slots: [],
-      message: 'No mock slots on Sundays — try another day (demo availability).',
+      message: 'No sample slots on Sundays — try another day (illustrative availability).',
     };
   }
 
