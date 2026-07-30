@@ -84,11 +84,20 @@ export default function AboutPage() {
       </section>
 
       <section className="section section--soft">
-        <div className="section__inner gallery">
-          <img src="/images/yacht2.jpg" alt="Yacht detail" />
-          <img src="/images/familyatsea.jpg" alt="Sailing with family" />
-          <img src="/images/stock/gallery-bay.jpg" alt="" />
-          <img src="/images/stock/gallery-coast.jpg" alt="" />
+        <div className="section__inner">
+          <h2>On the water</h2>
+          <div className="gallery">
+            <img src="/images/yacht2.jpg" alt="Yacht under sail along the coast" />
+            <img
+              src="/images/familyatsea.jpg"
+              alt="Family in lifejackets enjoying the view from the cockpit"
+            />
+            <img src="/images/Yacht.jpg" alt="Tom’s yacht ashore, sail raised" />
+            <img
+              src="/images/yachttransport.png"
+              alt="Yacht on trailer behind a van — mobile Golden Bay sailing"
+            />
+          </div>
         </div>
       </section>
     </SiteLayout>

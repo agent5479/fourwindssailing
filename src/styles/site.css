@@ -347,17 +347,63 @@ p {
 }
 
 .page-hero {
-  background:
-    linear-gradient(135deg, var(--navy-deep), var(--navy-mid)),
-    url('/images/stock/hero-sea.jpg') center/cover;
+  position: relative;
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy-mid));
   color: var(--white);
   padding: 3.5rem 1.25rem 3rem;
+  overflow: hidden;
+}
+
+.page-hero--photo {
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-hero__veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 21, 40, 0.35) 0%,
+    rgba(7, 21, 40, 0.78) 100%
+  );
 }
 
 .page-hero__inner {
+  position: relative;
+  z-index: 1;
   max-width: 1120px;
   margin: 0 auto;
+  width: 100%;
   animation: riseIn 0.7s ease both;
+}
+
+.home-family {
+  margin: 0 0 1.75rem;
+  max-width: 520px;
+}
+
+.home-family img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  max-height: 420px;
+}
+
+.home-family figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 .page-hero h1 {

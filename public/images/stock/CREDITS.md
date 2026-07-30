@@ -17,4 +17,7 @@ All downloaded from Unsplash (https://unsplash.com/license) — free to use comm
 
 - `/images/logo.png` — Four Winds Sailing logo
 - `/images/TomBillingham.jpg` — Tom Billingham portrait
-- `/images/Yacht.jpg`, `/images/yacht2.jpg`, `/images/yachttransport.png`, `/images/familyatsea.jpg` — Tom’s photos
+- `/images/Yacht.jpg` — yacht ashore, sail raised
+- `/images/yacht2.jpg` — yacht under sail (hero / charters)
+- `/images/familyatsea.jpg` — family cockpit / lifejackets (intro sails)
+- `/images/yachttransport.png` — trailer transport (skipper hire / custom)

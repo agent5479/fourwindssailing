@@ -19,7 +19,7 @@ export const CHARTER_PACKAGES: CharterPackage[] = [
       'A taste of Golden Bay under sail — slip the marina, feel the breeze, and see the coast from the water. Perfect for families with limited time.',
     priceFrom: 'From $420 (mock)',
     maxGuests: 4,
-    image: '/images/familyatsea.jpg',
+    image: '/images/yacht2.jpg',
     bookingType: 'short_sail',
   },
   {
@@ -30,7 +30,7 @@ export const CHARTER_PACKAGES: CharterPackage[] = [
       'Morning or afternoon on the bay — explore inlets, drop the hook for a swim or picnic, and set your own pace with Tom at the helm.',
     priceFrom: 'From $650 (mock)',
     maxGuests: 4,
-    image: '/images/stock/half-day.jpg',
+    image: '/images/Yacht.jpg',
     bookingType: 'half_day',
   },
   {
@@ -41,7 +41,7 @@ export const CHARTER_PACKAGES: CharterPackage[] = [
       'A full day of Golden Bay sailing — remote beaches, coast exploration, and time to linger. Your day, your way under sail.',
     priceFrom: 'From $980 (mock)',
     maxGuests: 4,
-    image: '/images/yacht2.jpg',
+    image: '/images/stock/half-day.jpg',
     bookingType: 'full_day',
   },
   {
@@ -52,7 +52,7 @@ export const CHARTER_PACKAGES: CharterPackage[] = [
       'Learn the basics on Tom’s yacht — parts of the boat, points of sail, helm time, and a few knots. Fun, clear teaching in a beautiful classroom.',
     priceFrom: 'From $480 (mock)',
     maxGuests: 4,
-    image: '/images/stock/intro-sail.jpg',
+    image: '/images/familyatsea.jpg',
     bookingType: 'intro_sailing',
   },
   {
@@ -63,7 +63,7 @@ export const CHARTER_PACKAGES: CharterPackage[] = [
       'Overnight or multi-day ideas, special occasions, or a route you have in mind. Tell Tom what you’re after and he’ll shape a plan around weather and tides.',
     priceFrom: 'Enquire',
     maxGuests: 4,
-    image: '/images/stock/sunset.jpg',
+    image: '/images/yachttransport.png',
     bookingType: 'custom_charter',
     enquireOnly: true,
   },

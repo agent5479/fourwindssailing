@@ -9,9 +9,11 @@ export default function ChartersPage() {
       description="Private skippered sailing charters in Golden Bay — short bay sails, half-day, full-day, and intro to sailing with Tom Billingham."
       path="/charters"
       bodyClass="page-charters"
-      ogImage="/images/Yacht.jpg"
+      ogImage="/images/yacht2.jpg"
       hero={
-        <section className="page-hero">
+        <section className="page-hero page-hero--photo">
+          <img src="/images/yacht2.jpg" alt="" className="page-hero__bg" aria-hidden="true" />
+          <div className="page-hero__veil" aria-hidden="true" />
           <div className="page-hero__inner">
             <p className="eyebrow">Secondary service</p>
             <h1>Private charters</h1>

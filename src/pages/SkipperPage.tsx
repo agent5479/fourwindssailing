@@ -57,13 +57,17 @@ export default function SkipperPage() {
 
       <section className="section section--soft">
         <div className="section__inner split">
-          <img src="/images/stock/marina.jpg" alt="" className="split__img" />
+          <img
+            src="/images/yachttransport.png"
+            alt="Trailer-sailer on the road — ready for Golden Bay launches"
+            className="split__img"
+          />
           <div>
-            <h2>On your vessel</h2>
+            <h2>On your vessel — or where the wind is</h2>
             <p>
               Whether you need a relief day, a coastal hop, or a calm hand while you enjoy your own
               boat, Tom works as an owner-operator — professional, personal, and local to Golden
-              Bay.
+              Bay. Trailer-capable kit means launches can follow the weather and the season.
             </p>
             <p className="fine-print">
               Operating within the privileges of his Skipper Restricted Limits (SRL) certificate.

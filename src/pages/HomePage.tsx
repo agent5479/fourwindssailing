@@ -11,11 +11,11 @@ export default function HomePage() {
       description={SEO_DEFAULT_DESCRIPTION}
       path="/"
       bodyClass="page-home"
-      ogImage="/images/stock/hero-sea.jpg"
+      ogImage="/images/yacht2.jpg"
       hero={
         <section className="hero">
           <div className="hero__media" aria-hidden="true">
-            <img src="/images/stock/hero-sea.jpg" alt="" className="hero__bg" />
+            <img src="/images/yacht2.jpg" alt="" className="hero__bg" />
             <div className="hero__veil" />
           </div>
           <div className="hero__content">
@@ -88,7 +88,7 @@ export default function HomePage() {
           <h2>Private charters on Tom’s yacht</h2>
           <p className="lede">
             Same skipper, same care — whether he’s on your deck or his. Intimate whole-boat sails
-            across Golden Bay.
+            across Golden Bay — families welcome, lifejackets on, your pace.
           </p>
           <div className="package-teasers">
             {CHARTER_PACKAGES.filter((p) => !p.enquireOnly).slice(0, 3).map((pkg) => (
@@ -100,6 +100,15 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+          <figure className="home-family">
+            <img
+              src="/images/familyatsea.jpg"
+              alt="Family in lifejackets looking out from the cockpit toward the Golden Bay coast"
+            />
+            <figcaption>
+              Safe, personal sails — spare jackets in the cockpit, coast on the horizon.
+            </figcaption>
+          </figure>
           <Link to="/charters" className="btn btn--navy">
             Browse charters
           </Link>
