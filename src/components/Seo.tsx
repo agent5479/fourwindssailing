@@ -144,6 +144,9 @@ function applySeo({
       siteUrl,
     })
   );
+
+  // Tell Playwright prerender that SEO + page shell are ready to snapshot
+  document.documentElement.setAttribute('data-app-ready', 'true');
 }
 
 export default function Seo(props: SeoProps) {

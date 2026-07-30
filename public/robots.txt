@@ -1,10 +1,10 @@
 # Four Winds Sailing — https://agent5479.github.io/fourwindssailing
 # For Google Search Console & Google Business Profile URL attribution
-# When fourwindssailing.nz is live, rebuild so this Sitemap URL matches the canonical host.
 
 User-agent: *
 Allow: /
 
+# Prefer HTTPS canonical host
 User-agent: Googlebot
 Allow: /
 

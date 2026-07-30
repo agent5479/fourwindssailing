@@ -38,6 +38,10 @@ In the repo: **Settings → Pages → Source: GitHub Actions** (required once).
 
 SEO includes LocalBusiness + Person JSON-LD, Open Graph / Twitter cards, geo meta (NZ-TAS / Golden Bay), and an allow-all `robots.txt` pointing at the sitemap.
 
+### Static HTML for crawlers
+
+`npm run build:static` prerenders every route to `dist/<route>/index.html` (Playwright), then `verify-prerender` fails the build if pages look like empty SPA shells. GitHub Actions deploys those files so scrapers receive titles, meta, JSON-LD, and visible `<h1>` content without running JavaScript.
+
 ## Pages
 
 | Path | Purpose |
