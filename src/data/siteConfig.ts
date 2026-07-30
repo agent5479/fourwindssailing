@@ -7,7 +7,7 @@ export const SITE_OWNER = 'Tom Billingham';
 export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61590890969011';
 
 /** Default / fallback when VITE_SITE_URL is unset (local). CI sets the live origin. */
-export const SITE_URL_FALLBACK = 'https://agent5479.github.io/fourwindssailing';
+export const SITE_URL_FALLBACK = 'https://fourwindssailing.nz';
 
 export const SEO_DEFAULT_TITLE =
   'Four Winds Sailing | Skipper for Hire & Private Charters — Golden Bay NZ';

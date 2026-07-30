@@ -36,9 +36,10 @@ jobs:
       - name: Build static site
         run: npm run build:static
         env:
-          VITE_BASE: /fourwindssailing/
-          VITE_SITE_URL: https://agent5479.github.io/fourwindssailing
-          SITE_URL: https://agent5479.github.io/fourwindssailing
+          # Custom domain serves from site root (not /fourwindssailing/)
+          VITE_BASE: /
+          VITE_SITE_URL: https://fourwindssailing.nz
+          SITE_URL: https://fourwindssailing.nz
           VITE_GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 
       - name: Upload Pages artifact

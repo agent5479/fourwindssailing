@@ -2,8 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-// GitHub Pages project site: set VITE_BASE=/fourwindssailing/ in CI.
-// Custom domain / local: leave unset (defaults to /).
+// Custom domain (fourwindssailing.nz) and local: base `/`.
+// Only set VITE_BASE=/fourwindssailing/ when testing the github.io project path.
 const base = process.env.VITE_BASE || '/';
 
 export default defineConfig({
