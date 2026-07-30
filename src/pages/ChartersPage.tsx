@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SiteLayout from '../components/SiteLayout';
+import { asset } from '../data/assets';
 import { CHARTER_PACKAGES } from '../data/charters';
 
 export default function ChartersPage() {
@@ -12,7 +13,12 @@ export default function ChartersPage() {
       ogImage="/images/yacht2.jpg"
       hero={
         <section className="page-hero page-hero--photo">
-          <img src="/images/yacht2.jpg" alt="" className="page-hero__bg" aria-hidden="true" />
+          <img
+            src={asset('/images/yacht2.jpg')}
+            alt=""
+            className="page-hero__bg"
+            aria-hidden="true"
+          />
           <div className="page-hero__veil" aria-hidden="true" />
           <div className="page-hero__inner">
             <p className="eyebrow">Secondary service</p>
@@ -30,7 +36,7 @@ export default function ChartersPage() {
           <div className="charter-grid">
             {CHARTER_PACKAGES.map((pkg) => (
               <article key={pkg.id} className="charter-card">
-                <img src={pkg.image} alt="" />
+                <img src={asset(pkg.image)} alt="" />
                 <div className="charter-card__body">
                   <h2>{pkg.title}</h2>
                   <p className="charter-card__meta">

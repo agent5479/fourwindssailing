@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
+import { asset } from '../data/assets';
 import { SAMPLE_EXPERIENCE } from '../data/siteConfig';
 
 export default function AboutPage() {
@@ -24,7 +25,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="section__inner about-grid">
           <img
-            src="/images/TomBillingham.jpg"
+            src={asset('/images/TomBillingham.jpg')}
             alt="Tom Billingham"
             className="about-grid__photo"
             width={420}
@@ -79,7 +80,7 @@ export default function AboutPage() {
               See charter packages
             </Link>
           </div>
-          <img src="/images/Yacht.jpg" alt="Tom’s yacht" className="split__img" />
+          <img src={asset('/images/Yacht.jpg')} alt="Tom’s yacht" className="split__img" />
         </div>
       </section>
 
@@ -87,14 +88,14 @@ export default function AboutPage() {
         <div className="section__inner">
           <h2>On the water</h2>
           <div className="gallery">
-            <img src="/images/yacht2.jpg" alt="Yacht under sail along the coast" />
+            <img src={asset('/images/yacht2.jpg')} alt="Yacht under sail along the coast" />
             <img
-              src="/images/familyatsea.jpg"
+              src={asset('/images/familyatsea.jpg')}
               alt="Family in lifejackets enjoying the view from the cockpit"
             />
-            <img src="/images/Yacht.jpg" alt="Tom’s yacht ashore, sail raised" />
+            <img src={asset('/images/Yacht.jpg')} alt="Tom’s yacht ashore, sail raised" />
             <img
-              src="/images/yachttransport.png"
+              src={asset('/images/yachttransport.png')}
               alt="Yacht on trailer behind a van — mobile Golden Bay sailing"
             />
           </div>

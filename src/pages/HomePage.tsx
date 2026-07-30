@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
+import { asset } from '../data/assets';
 import { CHARTER_PACKAGES } from '../data/charters';
 import { SEO_DEFAULT_DESCRIPTION, SITE_NAME, SITE_TAGLINE, TESTIMONIALS } from '../data/siteConfig';
 
@@ -15,11 +16,11 @@ export default function HomePage() {
       hero={
         <section className="hero">
           <div className="hero__media" aria-hidden="true">
-            <img src="/images/yacht2.jpg" alt="" className="hero__bg" />
+            <img src={asset('/images/yacht2.jpg')} alt="" className="hero__bg" />
             <div className="hero__veil" />
           </div>
           <div className="hero__content">
-            <img src="/images/logo.png" alt="Four Winds Sailing" className="hero__logo" />
+            <img src={asset('/images/logo.png')} alt="Four Winds Sailing" className="hero__logo" />
             <p className="hero__brand">Four Winds Sailing</p>
             <h1 className="hero__title">Your Golden Bay skipper — hire me, or sail with me</h1>
             <p className="hero__support">{SITE_TAGLINE}</p>
@@ -38,7 +39,7 @@ export default function HomePage() {
       <section className="section meet-tom reveal">
         <div className="section__inner meet-tom__grid">
           <img
-            src="/images/TomBillingham.jpg"
+            src={asset('/images/TomBillingham.jpg')}
             alt="Tom Billingham, skipper"
             className="meet-tom__photo"
             width={480}
@@ -75,7 +76,7 @@ export default function HomePage() {
             </Link>
           </div>
           <img
-            src="/images/yachttransport.png"
+            src={asset('/images/yachttransport.png')}
             alt="Yacht being transported"
             className="split__img"
           />
@@ -91,18 +92,20 @@ export default function HomePage() {
             across Golden Bay — families welcome, lifejackets on, your pace.
           </p>
           <div className="package-teasers">
-            {CHARTER_PACKAGES.filter((p) => !p.enquireOnly).slice(0, 3).map((pkg) => (
-              <article key={pkg.id} className="teaser">
-                <img src={pkg.image} alt="" />
-                <h3>{pkg.title}</h3>
-                <p>{pkg.duration}</p>
-                <p className="teaser__price">{pkg.priceFrom}</p>
-              </article>
-            ))}
+            {CHARTER_PACKAGES.filter((p) => !p.enquireOnly)
+              .slice(0, 3)
+              .map((pkg) => (
+                <article key={pkg.id} className="teaser">
+                  <img src={asset(pkg.image)} alt="" />
+                  <h3>{pkg.title}</h3>
+                  <p>{pkg.duration}</p>
+                  <p className="teaser__price">{pkg.priceFrom}</p>
+                </article>
+              ))}
           </div>
           <figure className="home-family">
             <img
-              src="/images/familyatsea.jpg"
+              src={asset('/images/familyatsea.jpg')}
               alt="Family in lifejackets looking out from the cockpit toward the Golden Bay coast"
             />
             <figcaption>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { asset } from '../data/assets';
 import { FACEBOOK_URL, NAV_LINKS, SITE_NAME } from '../data/siteConfig';
 
 export default function SiteHeader() {
@@ -9,7 +10,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link to="/" className="site-logo" onClick={() => setOpen(false)}>
-          <img src="/images/logo.png" alt="" width={48} height={48} />
+          <img src={asset('/images/logo.png')} alt="" width={48} height={48} />
           <span className="site-logo__text">
             <strong>{SITE_NAME}</strong>
             <em>Golden Bay</em>

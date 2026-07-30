@@ -14,6 +14,7 @@ const rootDir = path.join(__dirname, '..');
 const distDir = path.join(rootDir, 'dist');
 const previewPort = 4173;
 const previewUrl = `http://127.0.0.1:${previewPort}`;
+const basePath = (process.env.VITE_BASE || '/').replace(/\/$/, '');
 
 function routeToFile(route) {
   if (route === '/' || route === '') {
@@ -30,6 +31,10 @@ function startStaticServer() {
   });
 
   const server = createServer((req, res) => {
+    let url = req.url || '/';
+    if (basePath && (url === basePath || url.startsWith(`${basePath}/`))) {
+      req.url = url.slice(basePath.length) || '/';
+    }
     serve(req, res, () => {
       res.statusCode = 404;
       res.end('Not found');
@@ -56,8 +61,9 @@ async function prerender() {
     const page = await browser.newPage();
 
     for (const route of PRERENDER_ROUTES) {
-      const url = `${previewUrl}${route}`;
-      console.log(`Prerendering ${route} …`);
+      const urlPath = route === '/' ? `${basePath}/` || '/' : `${basePath}${route}`;
+      const url = `${previewUrl}${urlPath}`;
+      console.log(`Prerendering ${route} → ${url}`);
       await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
       await page.waitForFunction(
         () => document.querySelector('meta[name="description"]')?.getAttribute('content'),

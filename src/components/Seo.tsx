@@ -9,6 +9,16 @@ interface SeoProps {
   image?: string;
 }
 
+function siteOrigin(): string {
+  return (import.meta.env.VITE_SITE_URL || window.location.origin).replace(/\/$/, '');
+}
+
+function absoluteFromSite(pathOrUrl: string): string {
+  if (pathOrUrl.startsWith('http')) return pathOrUrl;
+  const path = pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`;
+  return `${siteOrigin()}${path}`;
+}
+
 function applySeo(
   title: string,
   description: string,
@@ -29,8 +39,7 @@ function applySeo(
     canonical.rel = 'canonical';
     document.head.appendChild(canonical);
   }
-  const origin = import.meta.env.VITE_SITE_URL?.replace(/\/$/, '') || window.location.origin;
-  canonical.href = `${origin}${path === '/' ? '/' : path}`;
+  canonical.href = absoluteFromSite(path === '/' ? '/' : path);
 
   const setOg = (property: string, content: string) => {
     let el = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement | null;
@@ -46,10 +55,7 @@ function applySeo(
   setOg('og:description', description);
   setOg('og:url', canonical.href);
   setOg('og:site_name', SITE_NAME);
-  if (image) {
-    const imgUrl = image.startsWith('http') ? image : `${origin}${image}`;
-    setOg('og:image', imgUrl);
-  }
+  if (image) setOg('og:image', absoluteFromSite(image));
 }
 
 export default function Seo({ title, description, path, bodyClass, image }: SeoProps) {

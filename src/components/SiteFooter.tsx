@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { asset } from '../data/assets';
 import {
   CREDENTIALS,
   FACEBOOK_URL,
@@ -13,7 +14,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__inner">
         <div className="site-footer__brand">
-          <img src="/images/logo.png" alt="" width={56} height={56} />
+          <img src={asset('/images/logo.png')} alt="" width={56} height={56} />
           <div>
             <strong>{SITE_NAME}</strong>
             <p>{SITE_TAGLINE}</p>

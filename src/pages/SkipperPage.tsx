@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
+import { asset } from '../data/assets';
 import { SKIPPER_SERVICES } from '../data/charters';
 import { FACEBOOK_URL, SITE_EMAIL } from '../data/siteConfig';
 
@@ -58,7 +59,7 @@ export default function SkipperPage() {
       <section className="section section--soft">
         <div className="section__inner split">
           <img
-            src="/images/yachttransport.png"
+            src={asset('/images/yachttransport.png')}
             alt="Trailer-sailer on the road — ready for Golden Bay launches"
             className="split__img"
           />

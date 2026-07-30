@@ -2,7 +2,8 @@
 
 Portfolio and booking site for **Tom Billingham** — skipper for hire and private sailing charters in **Golden Bay, New Zealand**.
 
-- Site: [fourwindssailing.nz](https://fourwindssailing.nz)
+- Live (GitHub Pages): https://agent5479.github.io/fourwindssailing/
+- Custom domain (later): fourwindssailing.nz
 - Facebook: [profile](https://www.facebook.com/profile.php?id=61590890969011)
 
 ## Stack
@@ -19,19 +20,14 @@ npm run dev
 
 Optional: set `VITE_FORM_ENDPOINT` in `.env.local` for a live Google Apps Script booking backend. Without it, the charter booking wizard uses local mock availability.
 
-## Build (static / SEO)
+## Deploy (GitHub Pages via Actions)
 
-```bash
-npm run build:static
-```
+Push to `main` runs [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml):
+`npm run build:static` then deploys `dist/`.
 
-Outputs prerendered pages under `dist/`, plus `robots.txt` and `sitemap.xml`. Canonical origin defaults to `https://fourwindssailing.nz` (`VITE_SITE_URL` / `SITE_URL`).
+Live URL: https://agent5479.github.io/fourwindssailing/
 
-Preview:
-
-```bash
-npm run preview
-```
+In the repo: **Settings → Pages → Source: GitHub Actions** (required once).
 
 ## Pages
 
