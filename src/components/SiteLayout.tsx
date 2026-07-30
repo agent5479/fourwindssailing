@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import Seo from './Seo';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
+import { SEO_OG_IMAGE, SEO_OG_IMAGE_ALT } from '../data/siteConfig';
 
 interface SiteLayoutProps {
   title: string;
@@ -12,6 +13,9 @@ interface SiteLayoutProps {
   children: ReactNode;
   mainClassName?: string;
   ogImage?: string;
+  ogImageAlt?: string;
+  robots?: string;
+  ogType?: string;
 }
 
 export default function SiteLayout({
@@ -22,7 +26,10 @@ export default function SiteLayout({
   hero,
   children,
   mainClassName,
-  ogImage = '/images/logo.png',
+  ogImage = SEO_OG_IMAGE,
+  ogImageAlt = SEO_OG_IMAGE_ALT,
+  robots,
+  ogType,
 }: SiteLayoutProps) {
   return (
     <>
@@ -32,6 +39,9 @@ export default function SiteLayout({
         path={path}
         bodyClass={bodyClass}
         image={ogImage}
+        imageAlt={ogImageAlt}
+        robots={robots}
+        ogType={ogType}
       />
       <SiteHeader />
       {hero}

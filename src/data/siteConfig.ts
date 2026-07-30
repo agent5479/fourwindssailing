@@ -1,11 +1,42 @@
 export const SITE_NAME = 'Four Winds Sailing';
+export const SITE_LEGAL_NAME = 'Four Winds Sailing';
 export const SITE_TAGLINE = 'Local waters. Trusted hands. Your boat — or mine.';
 export const SITE_LOCATION = 'Golden Bay, New Zealand';
 export const SITE_EMAIL = 'hello@fourwindssailing.nz';
+export const SITE_OWNER = 'Tom Billingham';
 export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61590890969011';
 
+/** Default / fallback when VITE_SITE_URL is unset (local). CI sets the live origin. */
+export const SITE_URL_FALLBACK = 'https://agent5479.github.io/fourwindssailing';
+
+export const SEO_DEFAULT_TITLE =
+  'Four Winds Sailing | Skipper for Hire & Private Charters — Golden Bay NZ';
+
 export const SEO_DEFAULT_DESCRIPTION =
-  'Skipper for hire & private sailing charters in Golden Bay, New Zealand — Four Winds Sailing, Tom Billingham. SRL & RYA Yachtmaster.';
+  'Hire SRL & RYA Yachtmaster skipper Tom Billingham in Golden Bay, New Zealand — relief skippering, coastal deliveries, and private sailing charters on his yacht.';
+
+export const SEO_KEYWORDS = [
+  'Four Winds Sailing',
+  'Tom Billingham',
+  'skipper for hire Golden Bay',
+  'private sailing charter Golden Bay',
+  'Abel Tasman sailing',
+  'Tākaka skipper',
+  'SRL skipper New Zealand',
+  'RYA Yachtmaster NZ',
+  'trailer sailer charter',
+  'intro to sailing Golden Bay',
+].join(', ');
+
+export const SEO_LOCALE = 'en_NZ';
+export const SEO_GEO_REGION = 'NZ-TAS';
+export const SEO_GEO_PLACENAME = 'Golden Bay, Tasman, New Zealand';
+/** Approximate Tākaka / Golden Bay centre for geo meta & schema */
+export const SEO_GEO_POSITION = { lat: -40.855, lng: 172.808 };
+
+export const SEO_OG_IMAGE = '/images/yacht2.jpg';
+export const SEO_OG_IMAGE_ALT = 'Four Winds Sailing yacht under sail — Golden Bay, New Zealand';
+export const SEO_LOGO = '/images/logo.png';
 
 export interface NavLink {
   label: string;

@@ -8,11 +8,12 @@ import { FACEBOOK_URL, SITE_EMAIL } from '../data/siteConfig';
 export default function SkipperPage() {
   return (
     <SiteLayout
-      title="Skipper for Hire | Four Winds Sailing — Golden Bay"
-      description="Hire Tom Billingham as your Golden Bay skipper. Maritime NZ SRL & RYA Yachtmaster — relief skippering, deliveries, and owner days out."
+      title="Skipper for Hire Golden Bay | Tom Billingham — Four Winds Sailing"
+      description="Hire Tom Billingham as your Golden Bay skipper. Maritime NZ SRL & RYA Yachtmaster — relief skippering, coastal deliveries, and owner days out in Tasman, New Zealand."
       path="/skipper"
       bodyClass="page-skipper"
       ogImage="/images/TomBillingham.jpg"
+      ogImageAlt="Skipper Tom Billingham — Four Winds Sailing"
       hero={
         <section className="page-hero">
           <div className="page-hero__inner">

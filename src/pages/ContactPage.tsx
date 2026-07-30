@@ -22,8 +22,8 @@ export default function ContactPage() {
 
   return (
     <SiteLayout
-      title="Contact | Four Winds Sailing — Golden Bay"
-      description="Contact Tom Billingham at Four Winds Sailing for skipper hire or private charter enquiries in Golden Bay, New Zealand."
+      title="Contact Four Winds Sailing | Skipper Hire & Charters Golden Bay"
+      description="Contact Tom Billingham at Four Winds Sailing — skipper hire or private charter enquiries in Golden Bay, Tasman, New Zealand. Email hello@fourwindssailing.nz."
       path="/contact"
       bodyClass="page-contact"
       hero={

@@ -39,6 +39,7 @@ jobs:
           VITE_BASE: /fourwindssailing/
           VITE_SITE_URL: https://agent5479.github.io/fourwindssailing
           SITE_URL: https://agent5479.github.io/fourwindssailing
+          VITE_GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

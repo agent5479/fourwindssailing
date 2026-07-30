@@ -7,11 +7,13 @@ import { SAMPLE_EXPERIENCE } from '../data/siteConfig';
 export default function AboutPage() {
   return (
     <SiteLayout
-      title="About Tom Billingham | Four Winds Sailing"
-      description="Meet Tom Billingham of Four Winds Sailing — Golden Bay skipper with Maritime NZ SRL and RYA Yachtmaster qualifications."
+      title="About Tom Billingham | SRL & RYA Yachtmaster — Four Winds Sailing"
+      description="Meet Tom Billingham of Four Winds Sailing — Golden Bay skipper with Maritime NZ Skipper Restricted Limits (SRL) and RYA Yachtmaster qualifications."
       path="/about"
       bodyClass="page-about"
       ogImage="/images/TomBillingham.jpg"
+      ogImageAlt="Tom Billingham, skipper — Four Winds Sailing, Golden Bay"
+      ogType="profile"
       hero={
         <section className="page-hero">
           <div className="page-hero__inner">

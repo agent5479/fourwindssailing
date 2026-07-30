@@ -5,8 +5,8 @@ import BookForm from './BookForm';
 export default function BookPage() {
   return (
     <SiteLayout
-      title="Book a Charter | Four Winds Sailing — Golden Bay"
-      description="Request a private sailing charter in Golden Bay with Tom Billingham — short sails, half-day, full-day, or intro to sailing."
+      title="Book a Sailing Charter Golden Bay | Four Winds Sailing"
+      description="Request a private sailing charter in Golden Bay with Tom Billingham — short sails, half-day, full-day, or intro to sailing. Weather-dependent; confirm directly."
       path="/book"
       bodyClass="page-book"
       hero={

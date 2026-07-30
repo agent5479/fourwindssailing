@@ -29,6 +29,15 @@ Live URL: https://agent5479.github.io/fourwindssailing/
 
 In the repo: **Settings → Pages → Source: GitHub Actions** (required once).
 
+### Google Search Console / Business
+
+1. Verify the property (URL prefix: the live Pages URL, later `https://fourwindssailing.nz`).
+2. Optional HTML-tag verification: add repo secret `GOOGLE_SITE_VERIFICATION` (token only); the workflow injects it as `VITE_GOOGLE_SITE_VERIFICATION`.
+3. Submit `…/sitemap.xml` in Search Console.
+4. In Google Business Profile, set the website to the same canonical URL.
+
+SEO includes LocalBusiness + Person JSON-LD, Open Graph / Twitter cards, geo meta (NZ-TAS / Golden Bay), and an allow-all `robots.txt` pointing at the sitemap.
+
 ## Pages
 
 | Path | Purpose |

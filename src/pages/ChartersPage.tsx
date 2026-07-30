@@ -6,11 +6,12 @@ import { CHARTER_PACKAGES } from '../data/charters';
 export default function ChartersPage() {
   return (
     <SiteLayout
-      title="Private Charters | Four Winds Sailing — Golden Bay"
-      description="Private skippered sailing charters in Golden Bay — short bay sails, half-day, full-day, and intro to sailing with Tom Billingham."
+      title="Private Sailing Charters Golden Bay | Four Winds Sailing"
+      description="Private skippered sailing charters in Golden Bay, NZ — short bay sails, half-day, full-day, and intro to sailing with SRL skipper Tom Billingham."
       path="/charters"
       bodyClass="page-charters"
       ogImage="/images/yacht2.jpg"
+      ogImageAlt="Private sailing charter under sail in Golden Bay"
       hero={
         <section className="page-hero page-hero--photo">
           <img

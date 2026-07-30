@@ -3,16 +3,22 @@ import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
 import { asset } from '../data/assets';
 import { CHARTER_PACKAGES } from '../data/charters';
-import { SEO_DEFAULT_DESCRIPTION, SITE_NAME, SITE_TAGLINE, TESTIMONIALS } from '../data/siteConfig';
+import {
+  SEO_DEFAULT_DESCRIPTION,
+  SEO_DEFAULT_TITLE,
+  SITE_TAGLINE,
+  TESTIMONIALS,
+} from '../data/siteConfig';
 
 export default function HomePage() {
   return (
     <SiteLayout
-      title={`${SITE_NAME} | Tom Billingham — Golden Bay`}
+      title={SEO_DEFAULT_TITLE}
       description={SEO_DEFAULT_DESCRIPTION}
       path="/"
       bodyClass="page-home"
       ogImage="/images/yacht2.jpg"
+      ogImageAlt="Four Winds Sailing yacht under sail — Golden Bay, New Zealand"
       hero={
         <section className="hero">
           <div className="hero__media" aria-hidden="true">
