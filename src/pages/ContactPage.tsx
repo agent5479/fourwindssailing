@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import SiteLayout from '../components/SiteLayout';
-import { FACEBOOK_URL, SITE_EMAIL, SITE_LOCATION } from '../data/siteConfig';
+import { FACEBOOK_URL, PAGE_SEO, SITE_EMAIL, SITE_LOCATION } from '../data/siteConfig';
 import { submitEnquiry } from '../data/enquirySubmit';
 
 export default function ContactPage() {
@@ -42,10 +42,13 @@ export default function ContactPage() {
     }
   }
 
+  const seo = PAGE_SEO.contact;
+
   return (
     <SiteLayout
-      title="Contact Four Winds Sailing | Skipper Hire & Charters Golden Bay"
-      description={`Contact Tom Billingham at Four Winds Sailing — skipper hire or private charter enquiries in Golden Bay, Tasman, New Zealand. Email ${SITE_EMAIL}.`}
+      title={seo.title}
+      description={seo.description}
+      keywords={seo.keywords}
       path="/contact"
       bodyClass="page-contact"
       hero={

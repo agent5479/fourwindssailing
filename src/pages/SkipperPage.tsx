@@ -3,13 +3,15 @@ import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
 import { asset } from '../data/assets';
 import { SKIPPER_SERVICES } from '../data/charters';
-import { FACEBOOK_URL, SITE_EMAIL } from '../data/siteConfig';
+import { FACEBOOK_URL, PAGE_SEO, SITE_EMAIL } from '../data/siteConfig';
 
 export default function SkipperPage() {
+  const seo = PAGE_SEO.skipper;
   return (
     <SiteLayout
-      title="Skipper for Hire Golden Bay | Tom Billingham — Four Winds Sailing"
-      description="Hire Tom Billingham as your Golden Bay skipper. Maritime NZ SRL & RYA Yachtmaster — relief skippering, coastal deliveries, and owner days out in Tasman, New Zealand."
+      title={seo.title}
+      description={seo.description}
+      keywords={seo.keywords}
       path="/skipper"
       bodyClass="page-skipper"
       ogImage="/images/TomBillingham.jpg"

@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
 import SiteLayout from '../components/SiteLayout';
 import BookForm from './BookForm';
+import { PAGE_SEO } from '../data/siteConfig';
 
 export default function BookPage() {
+  const seo = PAGE_SEO.book;
   return (
     <SiteLayout
-      title="Book a Sailing Charter Golden Bay | Four Winds Sailing"
-      description="Request a private sailing charter in Golden Bay with Tom Billingham — short sails, half-day, full-day, or intro to sailing. Weather-dependent; confirm directly."
+      title={seo.title}
+      description={seo.description}
+      keywords={seo.keywords}
       path="/book"
       bodyClass="page-book"
       hero={

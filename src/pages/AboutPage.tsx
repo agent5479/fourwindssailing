@@ -2,13 +2,15 @@ import { Link } from 'react-router-dom';
 import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
 import { asset } from '../data/assets';
-import { SAMPLE_EXPERIENCE } from '../data/siteConfig';
+import { PAGE_SEO, SAMPLE_EXPERIENCE } from '../data/siteConfig';
 
 export default function AboutPage() {
+  const seo = PAGE_SEO.about;
   return (
     <SiteLayout
-      title="About Tom Billingham | SRL & RYA Yachtmaster — Four Winds Sailing"
-      description="Meet Tom Billingham of Four Winds Sailing — Golden Bay skipper with Maritime NZ Skipper Restricted Limits (SRL) and RYA Yachtmaster qualifications."
+      title={seo.title}
+      description={seo.description}
+      keywords={seo.keywords}
       path="/about"
       bodyClass="page-about"
       ogImage="/images/TomBillingham.jpg"

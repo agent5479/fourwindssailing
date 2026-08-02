@@ -21,6 +21,8 @@ interface SeoProps {
   bodyClass?: string;
   image?: string;
   imageAlt?: string;
+  /** Page-specific keywords; falls back to site-wide SEO_KEYWORDS */
+  keywords?: string;
   /** Override robots; default index,follow with rich snippets friendly flags */
   robots?: string;
   /** Optional page type for og:type (website | profile | article) */
@@ -68,6 +70,7 @@ function applySeo({
   bodyClass,
   image,
   imageAlt,
+  keywords,
   robots,
   ogType,
 }: SeoProps) {
@@ -80,13 +83,14 @@ function applySeo({
   const ogAlt = imageAlt || SEO_OG_IMAGE_ALT;
   const pageTitle = title || SEO_DEFAULT_TITLE;
   const pageDescription = description || SEO_DEFAULT_DESCRIPTION;
+  const pageKeywords = keywords || SEO_KEYWORDS;
 
   document.title = pageTitle;
   document.documentElement.lang = 'en-NZ';
   document.body.className = bodyClass || '';
 
   upsertMeta('name', 'description', pageDescription);
-  upsertMeta('name', 'keywords', SEO_KEYWORDS);
+  upsertMeta('name', 'keywords', pageKeywords);
   upsertMeta(
     'name',
     'robots',
@@ -162,6 +166,7 @@ export default function Seo(props: SeoProps) {
     props.bodyClass,
     props.image,
     props.imageAlt,
+    props.keywords,
     props.robots,
     props.ogType,
   ]);

@@ -3,18 +3,15 @@ import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
 import { asset } from '../data/assets';
 import { CHARTER_PACKAGES } from '../data/charters';
-import {
-  SEO_DEFAULT_DESCRIPTION,
-  SEO_DEFAULT_TITLE,
-  SITE_TAGLINE,
-  TESTIMONIALS,
-} from '../data/siteConfig';
+import { PAGE_SEO, SITE_TAGLINE, TESTIMONIALS } from '../data/siteConfig';
 
 export default function HomePage() {
+  const seo = PAGE_SEO.home;
   return (
     <SiteLayout
-      title={SEO_DEFAULT_TITLE}
-      description={SEO_DEFAULT_DESCRIPTION}
+      title={seo.title}
+      description={seo.description}
+      keywords={seo.keywords}
       path="/"
       bodyClass="page-home"
       ogImage="/images/yacht2.jpg"

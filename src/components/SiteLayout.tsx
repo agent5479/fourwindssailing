@@ -14,6 +14,7 @@ interface SiteLayoutProps {
   mainClassName?: string;
   ogImage?: string;
   ogImageAlt?: string;
+  keywords?: string;
   robots?: string;
   ogType?: string;
 }
@@ -28,6 +29,7 @@ export default function SiteLayout({
   mainClassName,
   ogImage = SEO_OG_IMAGE,
   ogImageAlt = SEO_OG_IMAGE_ALT,
+  keywords,
   robots,
   ogType,
 }: SiteLayoutProps) {
@@ -40,6 +42,7 @@ export default function SiteLayout({
         bodyClass={bodyClass}
         image={ogImage}
         imageAlt={ogImageAlt}
+        keywords={keywords}
         robots={robots}
         ogType={ogType}
       />

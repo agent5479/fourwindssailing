@@ -2,12 +2,15 @@ import { Link } from 'react-router-dom';
 import SiteLayout from '../components/SiteLayout';
 import { asset } from '../data/assets';
 import { CHARTER_PACKAGES } from '../data/charters';
+import { PAGE_SEO } from '../data/siteConfig';
 
 export default function ChartersPage() {
+  const seo = PAGE_SEO.charters;
   return (
     <SiteLayout
-      title="Private Sailing Charters Golden Bay | Four Winds Sailing"
-      description="Private skippered sailing charters in Golden Bay, NZ — short bay sails, half-day, full-day, and intro to sailing with SRL skipper Tom Billingham."
+      title={seo.title}
+      description={seo.description}
+      keywords={seo.keywords}
       path="/charters"
       bodyClass="page-charters"
       ogImage="/images/yacht2.jpg"
