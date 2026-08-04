@@ -13,6 +13,7 @@ export default function ChartersPage() {
       keywords={seo.keywords}
       path="/charters"
       bodyClass="page-charters"
+      constructionBanner
       ogImage="/images/yacht2.jpg"
       ogImageAlt="Private sailing charter under sail in Golden Bay"
       hero={

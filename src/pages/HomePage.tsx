@@ -14,6 +14,7 @@ export default function HomePage() {
       keywords={seo.keywords}
       path="/"
       bodyClass="page-home"
+      constructionBanner
       ogImage="/images/yacht2.jpg"
       ogImageAlt="Four Winds Sailing yacht under sail — Golden Bay, New Zealand"
       hero={

@@ -12,6 +12,7 @@ export default function BookPage() {
       keywords={seo.keywords}
       path="/book"
       bodyClass="page-book"
+      constructionBanner
       hero={
         <section className="page-hero">
           <div className="page-hero__inner">

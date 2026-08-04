@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import Seo from './Seo';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
+import ConstructionBanner from './ConstructionBanner';
 import { SEO_OG_IMAGE, SEO_OG_IMAGE_ALT } from '../data/siteConfig';
 
 interface SiteLayoutProps {
@@ -17,6 +18,7 @@ interface SiteLayoutProps {
   keywords?: string;
   robots?: string;
   ogType?: string;
+  constructionBanner?: boolean;
 }
 
 export default function SiteLayout({
@@ -32,6 +34,7 @@ export default function SiteLayout({
   keywords,
   robots,
   ogType,
+  constructionBanner = false,
 }: SiteLayoutProps) {
   return (
     <>
@@ -46,10 +49,13 @@ export default function SiteLayout({
         robots={robots}
         ogType={ogType}
       />
-      <SiteHeader />
-      {hero}
-      <main className={mainClassName}>{children}</main>
-      <SiteFooter />
+      <div className={constructionBanner ? 'site-shell site-shell--construction' : 'site-shell'}>
+        {constructionBanner && <ConstructionBanner />}
+        <SiteHeader />
+        {hero}
+        <main className={mainClassName}>{children}</main>
+        <SiteFooter />
+      </div>
     </>
   );
 }
