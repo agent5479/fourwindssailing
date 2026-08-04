@@ -54,7 +54,7 @@ export default function HomePage() {
             <h2>Tom Billingham</h2>
             <p>
               Four Winds Sailing is Tom’s owner-operator service out of Golden Bay.
-              SRL-qualified and RYA Yachtmaster–trained — private skippered and bareboat charters
+              SRL-qualified and RYA Yachtmaster Offshore–trained — private skippered and bareboat charters
               on Bright Sparx, plus vessel deliveries for boat owners. Flexible and personal.
             </p>
             <TrustChips compact />

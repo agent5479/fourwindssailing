@@ -659,6 +659,10 @@ p {
   padding-left: 1.1rem;
 }
 
+.cred-list li + li {
+  margin-top: 1em;
+}
+
 .cred-list--compact {
   list-style: none;
   padding: 0;

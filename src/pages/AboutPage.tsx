@@ -36,16 +36,44 @@ export default function AboutPage() {
             height={420}
           />
           <div>
-            <h2>Local waters. Trusted hands.</h2>
+            <h2>My Sailing Journey</h2>
             <p>
-              Kia ora — I’m Tom. I launched Four Winds Sailing to share Golden Bay under sail:
-              private skippered and bareboat charters on Bright Sparx, and vessel deliveries for
-              boat owners who need a capable hand.
+              Kia ora — I&apos;m Tom. Originally from Yorkshire in the UK, I first started sailing when I
+              arrived in Aotearoa New Zealand at the age of 20. After sailing around Tasman Bay on the
+              family H28, I decided I wanted to pursue a career on the water. I enrolled in the
+              Mahurangi Technical Institute&apos;s &ldquo;Superyacht course&rdquo; and once I completed it I left
+              for Europe on the hunt for a job!
             </p>
             <p>
-              Whether I’m on your deck or mine, you get
-              the same calm, personal approach — weather-honest, safety-first, and tuned to what
-              you actually want from the day.
+              I found my first job in Athens, Greece, joining the 20m schooner S/Y Gloria. We sailed
+              through the Mediterranean before crossing the Atlantic for the Caribbean. It was in Fort
+              Lauderdale in Florida when I switched from luxury yacht to the cramped and wet conditions
+              of a 32 foot fiberglass sloop with a motley crew of Norwegian adventurers — they were
+              heading back to Oslo via Canada, Greenland, Iceland, the Faroe Islands and Shetland.
+            </p>
+            <p>
+              It was this trip that made me decide to buy my own small vessel, and so I flew back to
+              Nelson and purchased the Four Winds — a 38 foot steel ketch. Four Winds was my ideal boat
+              for the time; I put together a crew of travellers and we left New Zealand for the Pacific
+              Islands, stopping in Fiji, Vanuatu, the Solomon Islands, PNG, Palau, the Philippines,
+              Taiwan, Japan and finally South Korea.
+            </p>
+            <p>
+              While in South Korea, we met a gentleman who explained to us that he had just bought a
+              yacht, online, that was in Fiji and needed to be brought to South Korea! So I became the
+              captain on my first delivery job. While preparing the boat in Fiji, we met with another
+              boat that we were to deliver on the same route. Both of these deliveries included stops
+              in many Pacific Islands and ended in South Korea.
+            </p>
+            <p>
+              During my time in the North Pacific I also delivered a 40 foot Beneteau from Hokkaido,
+              Japan to Busan, South Korea. Once this flurry of deliveries was over, I sailed the Four
+              Winds back from South Korea to Taiwan, where I settled with my wife and we had our two
+              sons born before deciding to return with the family to New Zealand.
+            </p>
+            <p>
+              Now it is time for me to share my experience with as many people as possible — sailing
+              is a magical way to travel and I hope to inspire people to take journeys near and far!
             </p>
             <TrustChips />
           </div>
@@ -57,10 +85,10 @@ export default function AboutPage() {
           <h2>Credentials</h2>
           <ul className="cred-list">
             <li>
-              <strong>Skipper Restricted Limits (SRL)</strong> — Maritime New Zealand (confirmed)
+              <strong>Skipper Restricted Limits (SRL)</strong> — Maritime New Zealand
             </li>
             <li>
-              <strong>RYA Yachtmaster</strong> — Royal Yachting Association (confirmed)
+              <strong>RYA Yachtmaster Offshore</strong> — Royal Yachting Association
             </li>
           </ul>
         </div>
@@ -69,10 +97,20 @@ export default function AboutPage() {
       <section className="section">
         <div className="section__inner split">
           <div>
-            <h2>The yacht</h2>
+            <h2>The Yacht</h2>
             <p>
-              An intimate trailer-sailer suited to Golden Bay day sails and intro coaching —
-              whole-boat charters for small groups, not crowded decks.
+              Bright Sparx is our Noelex 25, a 7.7-meter trailer sailer, featuring a lifting
+              ballasted centerboard and a spacious six-berth cabin. Designed in Australasia by Noel
+              Honey, Alex Trethewey, and Steve Marten, it is widely celebrated for balancing
+              high-performance club racing with family cruising comfort.
+            </p>
+            <p>
+              With a small kitchen with sink and small stove, a cassette toilet and berths for up to
+              six (though we recommend 4), it&apos;s the perfect boat for a weekend on the water.
+              Powered by a Yamaha 10hp outboard with 12v lighting and USB charging facilities, there
+              is everything you need for a comfortable experience. Tom&apos;s briefing will leave you
+              confident in the location and use of all the safety equipment and navigational aids on
+              board.
             </p>
             <Link to="/charters" className="btn btn--navy">
               See charter packages

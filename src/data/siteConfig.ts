@@ -13,7 +13,7 @@ export const SEO_DEFAULT_TITLE =
   'Four Winds Sailing | Private Charters & Skipper for Hire — Golden Bay NZ';
 
 export const SEO_DEFAULT_DESCRIPTION =
-  'Private skippered and bareboat charters on Bright Sparx in Golden Bay, New Zealand — plus domestic and international vessel deliveries with SRL & RYA Yachtmaster skipper Tom Billingham.';
+  'Private skippered and bareboat charters on Bright Sparx in Golden Bay, New Zealand — plus domestic and international vessel deliveries with SRL & RYA Yachtmaster Offshore skipper Tom Billingham.';
 
 /** Shared brand + locality terms included on every page. */
 const SEO_CORE_KEYWORDS = [
@@ -53,7 +53,7 @@ export const SEO_KEYWORDS = joinKeywords(SEO_CORE_KEYWORDS, [
   'Tākaka skipper',
   'SRL skipper New Zealand',
   'Maritime NZ Skipper Restricted Limits',
-  'RYA Yachtmaster NZ',
+  'RYA Yachtmaster Offshore NZ',
 ]);
 
 export interface PageSeo {
@@ -72,7 +72,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   skipper: {
     title: 'Delivery Skipper | Vessel Deliveries — Four Winds Sailing',
     description:
-      'Domestic and international vessel deliveries with Tom Billingham — over 25,000 NM experience, SRL & RYA Yachtmaster qualified. Golden Bay and worldwide routes considered.',
+      'Domestic and international vessel deliveries with Tom Billingham — over 25,000 NM experience, SRL & RYA Yachtmaster Offshore qualified. Golden Bay and worldwide routes considered.',
     keywords: joinKeywords(SEO_CORE_KEYWORDS, [
       'skipper for hire Golden Bay',
       'hire a skipper New Zealand',
@@ -82,7 +82,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       'owner days out sailing',
       'SRL skipper New Zealand',
       'Maritime NZ Skipper Restricted Limits',
-      'RYA Yachtmaster NZ',
+      'RYA Yachtmaster Offshore NZ',
       'Tākaka skipper',
     ]),
   },
@@ -116,15 +116,15 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     ]),
   },
   about: {
-    title: 'About Tom Billingham | SRL & RYA Yachtmaster — Four Winds Sailing',
+    title: 'About Tom Billingham | SRL & RYA Yachtmaster Offshore — Four Winds Sailing',
     description:
-      'Meet Tom Billingham of Four Winds Sailing — Golden Bay skipper with Maritime NZ Skipper Restricted Limits (SRL) and RYA Yachtmaster qualifications.',
+      'Meet Tom Billingham of Four Winds Sailing — Golden Bay skipper with Maritime NZ Skipper Restricted Limits (SRL) and RYA Yachtmaster Offshore qualifications.',
     keywords: joinKeywords(SEO_CORE_KEYWORDS, [
       'Tom Billingham skipper',
       'Four Winds Sailing about',
       'SRL skipper New Zealand',
       'Maritime NZ Skipper Restricted Limits',
-      'RYA Yachtmaster NZ',
+      'RYA Yachtmaster Offshore NZ',
       'Golden Bay sailing skipper',
       'qualified yacht skipper Tasman',
     ]),
@@ -175,7 +175,7 @@ export const CREDENTIALS = [
   },
   {
     id: 'rya',
-    label: 'RYA Yachtmaster',
+    label: 'RYA Yachtmaster Offshore',
     issuer: 'Royal Yachting Association',
     confirmed: true,
   },

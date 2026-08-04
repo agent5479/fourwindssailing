@@ -76,7 +76,7 @@ export function buildJsonLd(siteUrl = getSiteUrl()) {
         logo: logoUrl,
         email: SITE_EMAIL,
         description:
-          'Private skippered and bareboat charters and vessel deliveries in Golden Bay, New Zealand. SRL and RYA Yachtmaster qualified.',
+          'Private skippered and bareboat charters and vessel deliveries in Golden Bay, New Zealand. SRL and RYA Yachtmaster Offshore qualified.',
         slogan: SITE_TAGLINE,
         priceRange: '$$',
         currenciesAccepted: 'NZD',
@@ -104,7 +104,7 @@ export function buildJsonLd(siteUrl = getSiteUrl()) {
           'International vessel delivery',
           'Intro to sailing',
           'Skipper Restricted Limits',
-          'RYA Yachtmaster',
+          'RYA Yachtmaster Offshore',
         ],
         sameAs: [FACEBOOK_URL],
         founder: { '@id': personId },
@@ -128,7 +128,7 @@ export function buildJsonLd(siteUrl = getSiteUrl()) {
         },
         knowsAbout: [
           'Maritime NZ Skipper Restricted Limits (SRL)',
-          'RYA Yachtmaster',
+          'RYA Yachtmaster Offshore',
           'Golden Bay sailing',
         ],
         sameAs: [FACEBOOK_URL],
