@@ -13,7 +13,7 @@ const publicDir = path.join(__dirname, '..', 'public');
 const siteUrl = (
   process.env.SITE_URL ||
   process.env.VITE_SITE_URL ||
-  'https://fourwindssailing.nz'
+  'https://www.fourwindssailing.nz'
 ).replace(/\/$/, '');
 
 const lastmod = new Date().toISOString().slice(0, 10);
