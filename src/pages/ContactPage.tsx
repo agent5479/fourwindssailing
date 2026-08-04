@@ -1,0 +1,160 @@
+import { useState, type FormEvent } from 'react';
+import SiteLayout from '../components/SiteLayout';
+import { FACEBOOK_URL, PAGE_SEO, SITE_EMAIL, SITE_LOCATION } from '../data/siteConfig';
+import { submitEnquiry } from '../data/enquirySubmit';
+
+export default function ContactPage() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [topic, setTopic] = useState('charter');
+  const [message, setMessage] = useState('');
+  const [sent, setSent] = useState(false);
+  const [usedMailto, setUsedMailto] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    setSubmitting(true);
+    setError('');
+    setSent(false);
+    setUsedMailto(false);
+
+    try {
+      const result = await submitEnquiry({
+        name,
+        email,
+        phone,
+        topic,
+        message,
+      });
+      if (!result.ok) {
+        setError(result.error);
+        return;
+      }
+      setUsedMailto(result.method === 'mailto');
+      setSent(true);
+    } catch {
+      setError(`Could not send. Please email ${SITE_EMAIL} directly.`);
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  const seo = PAGE_SEO.contact;
+
+  return (
+    <SiteLayout
+      title={seo.title}
+      description={seo.description}
+      keywords={seo.keywords}
+      path="/contact"
+      bodyClass="page-contact"
+      hero={
+        <section className="page-hero">
+          <div className="page-hero__inner">
+            <p className="eyebrow">Contact</p>
+            <h1>Get in touch</h1>
+            <p>
+              Charter bookings, vessel deliveries, or just say kia ora — Tom will get back to you.
+            </p>
+          </div>
+        </section>
+      }
+    >
+      <section className="section">
+        <div className="section__inner contact-grid">
+          <div>
+            <h2>Reach Tom</h2>
+            <p>
+              <strong>Email:</strong>{' '}
+              <a href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a>
+            </p>
+            <p>
+              <strong>Phone:</strong> on request
+            </p>
+            <p>
+              <strong>Location:</strong> {SITE_LOCATION}
+            </p>
+            <p>
+              <strong>Facebook:</strong>{' '}
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
+                Four Winds Sailing on Facebook
+              </a>
+            </p>
+          </div>
+
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <h2>Send an enquiry</h2>
+            {sent && (
+              <p className="status">
+                {usedMailto
+                  ? `Your email client should open with the message ready — if not, email ${SITE_EMAIL} directly.`
+                  : 'Thanks — your enquiry has been sent to Tom. He’ll get back to you soon.'}
+              </p>
+            )}
+            {error && <p className="error">{error}</p>}
+            <label className="field">
+              <span>Name *</span>
+              <input
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                autoComplete="name"
+                disabled={submitting}
+              />
+            </label>
+            <label className="field">
+              <span>Email *</span>
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
+                disabled={submitting}
+              />
+            </label>
+            <label className="field">
+              <span>Phone</span>
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                autoComplete="tel"
+                disabled={submitting}
+              />
+            </label>
+            <label className="field">
+              <span>Topic</span>
+              <select
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                disabled={submitting}
+              >
+                <option value="charter">Private charter</option>
+                <option value="skipper">Vessel delivery</option>
+                <option value="intro">Intro to sailing</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label className="field">
+              <span>Message *</span>
+              <textarea
+                required
+                rows={5}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                disabled={submitting}
+              />
+            </label>
+            <button type="submit" className="btn btn--gold" disabled={submitting}>
+              {submitting ? 'Sending…' : 'Send enquiry'}
+            </button>
+          </form>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}
