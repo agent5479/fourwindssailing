@@ -1,4 +1,4 @@
-# Four Winds Sailing — https://www.fourwindssailing.nz
+# Four Winds Sailing — https://fourwindssailing.nz
 # For Google Search Console & Google Business Profile URL attribution
 
 User-agent: *
@@ -10,4 +10,4 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
-Sitemap: https://www.fourwindssailing.nz/sitemap.xml
+Sitemap: https://fourwindssailing.nz/sitemap.xml

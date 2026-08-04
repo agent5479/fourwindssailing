@@ -38,8 +38,8 @@ jobs:
         env:
           # Custom domain serves from site root (not /fourwindssailing/)
           VITE_BASE: "/"
-          VITE_SITE_URL: https://www.fourwindssailing.nz
-          SITE_URL: https://www.fourwindssailing.nz
+          VITE_SITE_URL: https://fourwindssailing.nz
+          SITE_URL: https://fourwindssailing.nz
           VITE_GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 
       - name: Upload Pages artifact
