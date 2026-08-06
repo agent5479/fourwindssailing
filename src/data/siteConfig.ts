@@ -184,12 +184,10 @@ export const CREDENTIALS = [
 export const TESTIMONIALS = [
   {
     quote:
-      'Tom put us at ease from the first line ashore. Calm, capable, and clearly loves these waters — we felt in safe hands the whole afternoon.',
-    name: 'Guest',
-  },
-  {
-    quote:
-      'Exactly what we needed: a local skipper who treated our boat with care and knew where the wind would fill in. We’ll call him again.',
-    name: 'Boat owner',
+      'Alabama is completed with your efforts and sweat (including the cold). You (Tom) are the true master of the Alabama!',
+    name: 'Windy Chon, Owner S/Y Alabama',
+    caption: 'Vuda Marina, Fiji - Busan, South Korea - approx 5000NM',
+    image: '/images/alabama-malecula.jpg',
+    imageAlt: 'S/Y Alabama',
   },
 ];

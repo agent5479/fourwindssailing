@@ -53,7 +53,11 @@ export default function AboutPage() {
             </p>
             <p>
               It was this trip that made me decide to buy my own small vessel, and so I flew back to
-              Nelson and purchased the Four Winds — a 38 foot steel ketch. Four Winds was my ideal boat
+              Nelson and purchased the Four Winds — a 38 foot steel ketch. Once I had Four Winds safely
+              tied up in Port Tarakohe, Golden Bay, I was called away to another job on a superyacht,
+              the 60m S/Y Zenji, in Los Angeles, USA. I worked on that boat for 9 months, cruising down
+              the West Coast of the US and passing through the Panama Canal and into the Caribbean. I
+              then returned to New Zealand to take care of the Four Winds. Four Winds was my ideal boat
               for the time; I put together a crew of travellers and we left New Zealand for the Pacific
               Islands, stopping in Fiji, Vanuatu, the Solomon Islands, PNG, Palau, the Philippines,
               Taiwan, Japan and finally South Korea.

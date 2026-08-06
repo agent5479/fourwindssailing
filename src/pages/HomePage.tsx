@@ -3,7 +3,7 @@ import SiteLayout from '../components/SiteLayout';
 import TrustChips from '../components/TrustChips';
 import { asset } from '../data/assets';
 import { CHARTER_PACKAGES } from '../data/charters';
-import { PAGE_SEO, SITE_TAGLINE, TESTIMONIALS } from '../data/siteConfig';
+import { PAGE_SEO, SITE_TAGLINE, TESTIMONIALS, FACEBOOK_URL } from '../data/siteConfig';
 
 export default function HomePage() {
   const seo = PAGE_SEO.home;
@@ -26,7 +26,7 @@ export default function HomePage() {
           <div className="hero__content">
             <img src={asset('/images/logo.png')} alt="Four Winds Sailing" className="hero__logo" />
             <p className="hero__brand">Four Winds Sailing</p>
-            <h1 className="hero__title">Private Skippered Charters, Bareboat, Deliveries, Advice</h1>
+            <h1 className="hero__title">Sailing charters in Golden Bay, Yacht Deliveries, Bareboat rental</h1>
             <p className="hero__support">{SITE_TAGLINE}</p>
             <div className="hero__ctas">
               <Link to="/charters" className="btn btn--gold">
@@ -121,6 +121,16 @@ export default function HomePage() {
               <blockquote key={t.name}>
                 <p>“{t.quote}”</p>
                 <footer>— {t.name}</footer>
+                {'caption' in t && t.caption && (
+                  <p className="testimonial__caption">{t.caption}</p>
+                )}
+                {'image' in t && t.image && (
+                  <img
+                    src={asset(t.image)}
+                    alt={'imageAlt' in t && t.imageAlt ? t.imageAlt : ''}
+                    className="testimonial__photo"
+                  />
+                )}
               </blockquote>
             ))}
           </div>
@@ -138,6 +148,14 @@ export default function HomePage() {
             <Link to="/book" className="btn btn--ghost">
               Book a charter
             </Link>
+            <a
+              href={FACEBOOK_URL}
+              className="btn btn--ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
           </div>
         </div>
       </section>
